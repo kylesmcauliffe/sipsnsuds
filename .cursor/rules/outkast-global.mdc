@@ -1,0 +1,13 @@
+---
+description: Lexington Outkast theme — global conventions, imports, minimal changes
+alwaysApply: true
+---
+
+# Outkast (Lexington Themes) — global rules
+
+- **Imports:** Use the `@/` alias (`@/*` → `src/*`) for anything under `src/`, matching existing files (e.g. `@/components/fundations/...`, `@/layouts/BaseLayout.astro`).
+- **Folder name:** Never rename `src/components/fundations/` (including the spelling **fundations**).
+- **Layouts:** Default site shell is `BaseLayout.astro` (Navigation, Footer, `BaseHead`). Content types use their dedicated layout in `src/layouts/` (`BlogLayout`, `WorkLayout`, `TeamLayout`, `ServicesLayout`, `LegalLayout`).
+- **Dependencies:** Do not add packages or claim features not listed in `package.json`. Lexington-specific npm scope in this repo: `@lexingtonthemes/seo` only.
+- **Edits:** Keep diffs small; mirror neighboring files’ patterns (structure, naming, Astro style).
+- **Docs links:** Theme and support URLs follow `README.md` (lexingtonthemes.com paths for Outkast specs, documentation, changelog, support).

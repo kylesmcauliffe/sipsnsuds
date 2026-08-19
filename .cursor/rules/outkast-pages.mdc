@@ -1,0 +1,12 @@
+---
+description: Outkast pages — routing, BaseLayout, getStaticPaths
+globs: src/pages/**/*
+alwaysApply: false
+---
+
+# Pages (`src/pages/`)
+
+- **Routing** is filesystem-based. Dynamic segments use `[...slug]` or `[tag]` as in this repo; paths pass `params` aligned with `entry.id` or tag strings from `posts` frontmatter.
+- **Collection pages** should follow the existing pattern: `getCollection("<name>")`, map to `getStaticPaths`, `render(entry)`, wrap with the correct layout from `src/layouts/`, pass `frontmatter={entry.data}` where applicable.
+- **Marketing/static pages** generally use `BaseLayout` directly (e.g. home, contact, pricing, `blog/tags/*`, `legal/about.astro`, `system/*`).
+- **RSS** is `rss.xml.js`; item links must stay consistent with `blog/posts/[...slug].astro` (`/blog/posts/${entry.id}`).

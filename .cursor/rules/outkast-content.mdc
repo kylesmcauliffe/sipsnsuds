@@ -1,0 +1,13 @@
+---
+description: Outkast content collections — schemas, frontmatter, image()
+globs: src/content/**/*
+alwaysApply: false
+---
+
+# Content (`src/content/`)
+
+- **Schemas** live in `src/content.config.ts`. Do not add fields there unless you update every consumer of `entry.data` for that collection.
+- **Collections:** `team`, `work`, `services`, `posts`, `legal` — see `AGENTS.md` for exact fields and template files.
+- **`image()` in frontmatter:** Use shapes already in the repo, e.g. `avatar.url` / `thumbnail.url` / `image.url` with a valid image path plus matching `alt` string. Breaking paths breaks the build.
+- **Filenames** drive URLs: dynamic routes use `entry.id` (typically the basename without extension, e.g. `privacy.md` → `privacy`).
+- **Posts** may be `.md` or `.mdx` (`posts` glob). Other collections are `.md` only per loader config.

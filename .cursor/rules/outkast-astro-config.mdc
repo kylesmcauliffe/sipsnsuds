@@ -1,0 +1,13 @@
+---
+description: Outkast Astro + content config — coordinate schema, integrations, site URL
+globs:
+  - astro.config.mjs
+  - src/content.config.ts
+alwaysApply: false
+---
+
+# `astro.config.mjs` and `src/content.config.ts`
+
+- **Change together when needed:** Content schema edits require checks across `src/pages/**` and any components reading `getCollection` data. Integration or `site` URL changes can affect `@astrojs/sitemap` and `rss.xml.js` (`context.site`).
+- **`astro.config.mjs`:** Integrations are `sitemap()` and `mdx()`; Tailwind is via `@tailwindcss/vite` in `vite.plugins`. Do not assume extra integrations exist.
+- **`src/content.config.ts`:** Uses `defineCollection`, `glob` loader, and `z` from `astro/zod`. Preserve `image()` usage for `team`, `work`, and `posts` image objects.
