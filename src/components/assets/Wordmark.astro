@@ -1,11 +1,21 @@
 ---
+import { Image } from "astro:assets";
+import Mark from "@/images/logo/cup-bubbles.png";
 const { class: className, ...rest } = Astro.props;
 ---
 
 <span
-  class:list={[
-    "font-display text-sns-espresso tracking-tight lowercase",
-    className,
-  ]}
-  {...rest}>sips n suds</span
+  class:list={["inline-flex items-center gap-2 text-sns-espresso", className]}
+  {...rest}
 >
+  <Image
+    src={Mark}
+    alt="Sips n Suds cup and bubbles"
+    width={88}
+    height={88}
+    densities={[1, 2]}
+    format="png"
+    class="size-10 shrink-0 object-contain sm:size-11"
+  />
+  <span class="font-display tracking-tight lowercase">sips n suds</span>
+</span>

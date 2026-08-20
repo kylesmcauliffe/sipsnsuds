@@ -71,10 +71,9 @@
   --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fredoka", "Montserrat", sans-serif;
 
-  /* Sips n Suds brand (sampled from Casa Coco oval, 2026-08-19) */
-  --color-sns-espresso: #3d230f;
-  --color-sns-butter: #fdfbb9;
-  --color-sns-sky: #b2d7e6;
+  /* Sips n Suds brand — yellow/brown duotone sticker (sampled 2026-08-19) */
+  --color-sns-espresso: #392411;
+  --color-sns-butter: #fefbc1;
   --color-sns-cream: #fffef2;
   --color-sns-foam: #ffffff;
 
@@ -87,24 +86,24 @@
   --color-base-500: #8a5c3a;
   --color-base-600: #6b4024;
   --color-base-700: #53301a;
-  --color-base-800: #3d230f;
+  --color-base-800: #392411;
   --color-base-900: #2a1709;
   --color-base-950: #1a0e05;
-  /* accent = sky suds */
-  --color-accent-50: #f4fafc;
-  --color-accent-100: #e4f2f7;
-  --color-accent-200: #b2d7e6;
-  --color-accent-300: #8ec4d8;
-  --color-accent-400: #6aaec8;
-  --color-accent-500: #4a93b0;
-  --color-accent-600: #377691;
-  --color-accent-700: #2c5d73;
-  --color-accent-800: #244858;
-  --color-accent-900: #1c3642;
-  --color-accent-950: #102028;
+  /* accent = butter sticker (no blue) */
+  --color-accent-50: #fffef2;
+  --color-accent-100: #fefbc1;
+  --color-accent-200: #f6f08a;
+  --color-accent-300: #ebe45c;
+  --color-accent-400: #d4cc3a;
+  --color-accent-500: #8a5c3a;
+  --color-accent-600: #6b4024;
+  --color-accent-700: #53301a;
+  --color-accent-800: #392411;
+  --color-accent-900: #2a1709;
+  --color-accent-950: #1a0e05;
   /* Yellow = butter */
   --color-yellow-50: #fffef2;
-  --color-yellow-100: #fdfbb9;
+  --color-yellow-100: #fefbc1;
   --color-yellow-200: #f6f08a;
   --color-yellow-300: #ebe45c;
   --color-yellow-400: #d4cc3a;

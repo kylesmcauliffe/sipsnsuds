@@ -18,6 +18,6 @@ export default defineConfig({
     skipInline: false,
     drafts: true,
   },
-  site: "https://yourdomain.com",
+  site: "https://sipsnsudssf.com",
   integrations: [sitemap(), mdx()],
 });
