@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import Bear from "@/images/mascot/bear-pour.png";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+
+<section class="bg-sns-sky overflow-hidden relative">
+  <Wrapper variant="standard" class="py-16 lg:py-20">
+    <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
+      <div class="max-w-xl">
+        <p
+          class="text-sm font-medium uppercase tracking-wide text-sns-espresso/70"
+        >
+          Meet the mascot
+        </p>
+        <Text
+          tag="h2"
+          variant="displayMD"
+          class="mt-4 text-sns-espresso text-balance"
+        >
+          Cool bear. Fresh pour.
+        </Text>
+        <Text
+          tag="p"
+          variant="textLG"
+          class="mt-4 text-sns-espresso/80 text-balance"
+        >
+          Our polar bear pours the coffee — cap on, no shades. You’ll see him on
+          stickers and windows, never in the oval logo.
+        </Text>
+      </div>
+      <Image
+        src={Bear}
+        alt="Sips n Suds polar bear mascot pouring coffee, cartoon brush-stroke style"
+        width={420}
+        height={420}
+        class="mx-auto w-full max-w-xs rounded-2xl object-contain lg:mx-0"
+      />
+    </div>
+  </Wrapper>
+</section>

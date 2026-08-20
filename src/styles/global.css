@@ -4,23 +4,16 @@
 @plugin "tailwind-scrollbar-hide";
 
 @font-face {
-  font-family: "Paytone One";
-  src: url("../fonts/PaytoneOne-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Fredoka";
+  src: url("../fonts/Fredoka-Variable.ttf") format("truetype");
+  font-weight: 300 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Nunito";
-  src: url("../fonts/Nunito-Variable.ttf") format("truetype");
-  font-weight: 200 1000;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Caveat";
-  src: url("../fonts/Caveat-Variable.ttf") format("truetype");
-  font-weight: 400 700;
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Variable.ttf") format("truetype");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -75,9 +68,8 @@
 }
 @theme {
   /* Typography */
-  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Paytone One", "Nunito", sans-serif;
-  --font-script: "Caveat", cursive;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", "Montserrat", sans-serif;
 
   /* Sips n Suds brand (sampled from Casa Coco oval, 2026-08-19) */
   --color-sns-espresso: #3d230f;

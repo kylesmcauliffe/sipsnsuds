@@ -1,0 +1,61 @@
+---
+import Pour from "@/images/stickers/pour.svg";
+import Washer from "@/images/stickers/washer.svg";
+import Stickers from "@/images/stickers/sheet.svg";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+
+<section class="bg-sns-cream overflow-hidden relative">
+  <Wrapper variant="standard" class="py-20 lg:py-24">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <p class="text-sm font-medium uppercase tracking-wide text-accent-600">
+          Two errands, one stop
+        </p>
+        <Text
+          tag="h2"
+          variant="displayMD"
+          class="mt-4 text-sns-espresso text-balance"
+        >
+          Wash a load. Sip a drip.
+        </Text>
+        <Text tag="p" variant="textLG" class="mt-6 text-base-600 text-balance">
+          Neighborhood coffee up front, clean machines in the back. Concrete
+          walls, oak benches, and daylight through big windows.
+        </Text>
+        <ul class="mt-10 grid gap-4 sm:grid-cols-2">
+          <li class="flex items-center gap-3">
+            <img
+              src={Pour.src}
+              alt=""
+              width="64"
+              height="64"
+              class="size-14 object-contain"
+            />
+            <span class="font-medium text-sns-espresso">Coffee & snacks</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <img
+              src={Washer.src}
+              alt=""
+              width="64"
+              height="64"
+              class="size-14 object-contain"
+            />
+            <span class="font-medium text-sns-espresso">Wash · dry · fold</span>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <img
+          src={Stickers.src}
+          alt="Sips n Suds coffee and laundry sticker illustrations"
+          width="640"
+          height="640"
+          class="w-full max-w-md object-contain"
+        />
+      </div>
+    </div>
+  </Wrapper>
+</section>

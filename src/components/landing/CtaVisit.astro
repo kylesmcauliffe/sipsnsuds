@@ -1,0 +1,31 @@
+---
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+---
+
+<section class="bg-sns-butter overflow-hidden relative">
+  <Wrapper variant="standard" class="py-20 lg:py-24">
+    <div class="max-w-2xl">
+      <Text
+        tag="h2"
+        variant="displayMD"
+        class="text-sns-espresso text-balance"
+      >
+        Come sip while your load runs.
+      </Text>
+      <Text tag="p" variant="textLG" class="mt-6 text-base-600 text-balance">
+        Drop by for a drip and a wash. Hours and location live on the contact
+        page — say hi anytime.
+      </Text>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <Button isLink size="lg" variant="default" href="/contact">
+          Hours & location
+        </Button>
+        <Button isLink size="lg" variant="muted" href="/pricing-simple">
+          Wash prices
+        </Button>
+      </div>
+    </div>
+  </Wrapper>
+</section>
