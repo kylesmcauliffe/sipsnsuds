@@ -1,41 +1,38 @@
 ---
-// Assets
-import BigLogo from "@/components/assets/BigLogo.astro";
-// Fundations
+import Wordmark from "@/components/assets/Wordmark.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-const services = [
-  { name: "License", link: "https://www.lexingtonthemes.com/legal/license" },
-  { name: "Overview", link: "/system/overview" },
-  { name: "Style Guide", link: "/system/" },
-  { name: "More themes", link: "https://lexingtonthemes.com/" },
-  {
-    name: "Documentation",
-    link: "https://www.lexingtonthemes.com/documentation",
-  },
-  { name: "Lexington On X", link: "https://twitter.com/lexingtonthemes" },
+const links = [
+  { name: "Menu", href: "/services" },
+  { name: "Wash prices", href: "/pricing-simple" },
+  { name: "Contact", href: "/contact" },
+  { name: "System", href: "/system/overview" },
 ];
 ---
 
-<section class="bg-white overflow-hidden">
+<section class="bg-sns-foam overflow-hidden">
   <Wrapper variant="standard" class="py-24">
-    <div class="max-w-sm">
+    <div class="max-w-xl">
+      <Wordmark class="text-2xl" />
       <Text
         tag="h2"
-        variant="displayXL"
-        class="tracking-tighter text-accent-800 text-balance"
+        variant="displayLG"
+        class="mt-6 text-sns-espresso text-balance"
       >
-        Your next web agency
+        Coffee up front. Washers in the back.
       </Text>
-      <ul role="list" class="flex flex-wrap gap-2 max-w-xl w-full mt-24">
+      <p class="mt-4 font-medium text-base-600">
+        Concrete, oak, and big windows. Sip while your load runs.
+      </p>
+      <ul role="list" class="flex flex-wrap gap-2 max-w-xl w-full mt-16">
         {
-          services.map((service) => (
+          links.map((link) => (
             <li>
               <a
-                class="text-accent-400 text-xl hover:text-pink-500 duration-300"
-                href={service.link}
+                class="text-sns-espresso text-xl hover:text-accent-600 duration-300"
+                href={link.href}
               >
-                {service.name}
+                {link.name}
               </a>
             </li>
           ))
@@ -43,5 +40,4 @@ const services = [
       </ul>
     </div>
   </Wrapper>
-  <BigLogo class="lg:-mr-52 lg:ml-110 lg:scale-150 text-accent-400" />
 </section>

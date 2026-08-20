@@ -1,32 +1,24 @@
 ---
-// Assets
-import BigLogo from "@/components/assets/BigLogo.astro";
-// Fundations
+import Wordmark from "@/components/assets/Wordmark.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Components
 import Search from "@/components/global/Search.astro";
-// Icons
 import Menu from "@/components/fundations/icons/Menu.astro";
 import Close from "@/components/fundations/icons/Close.astro";
 const navLinks = [
-  { label: "Overview", href: "/system/overview" },
-
-  { label: "Services", href: "/services" },
-  { label: "Work", href: "/work" },
-  { label: "Team", href: "/team" },
-  { label: "Pricing", href: "/pricing-simple" },
-  { label: "Blog", href: "/blog" },
+  { label: "Menu", href: "/services" },
+  { label: "Wash", href: "/pricing-simple" },
   { label: "Contact", href: "/contact" },
   { label: "System", href: "/system/overview" },
 ];
 ---
 
-<nav class="bg-white overflow-hidden relative">
+<nav class="bg-sns-foam overflow-hidden relative">
   <Wrapper variant="standard" class="py-4">
     <div class="flex items-center gap-4">
-      <a href="/" class="font-bold tracking-tighter text-accent-500 uppercase">
-        <BigLogo class="h-6 text-accent-700" />
+      <a href="/" class="text-xl">
+        <span class="sr-only">Sips n Suds home</span>
+        <Wordmark />
       </a>
       <div class="ml-auto flex items-center gap-2">
         <Search />
@@ -51,12 +43,12 @@ const navLinks = [
             <div
               id="mobile-nav-drawer"
               data-mobile-nav-drawer
-              class="ml-auto flex h-full w-[min(22rem,90vw)] flex-col gap-8 translate-x-full bg-white px-6 py-8 shadow-2xl transition-transform duration-300"
+              class="ml-auto flex h-full w-[min(22rem,90vw)] flex-col gap-8 translate-x-full bg-sns-foam px-6 py-8 shadow-2xl transition-transform duration-300"
             >
               <div class="flex items-center justify-between">
                 <a href="/">
                   <span class="sr-only">Home</span>
-                  <BigLogo class="h-6 text-accent-700" />
+                  <Wordmark class="text-xl" />
                 </a>
 
                 <Button
@@ -76,7 +68,7 @@ const navLinks = [
                     <a
                       data-mobile-nav-link
                       href={link.href}
-                      class="text-base font-medium text-accent-800 transition-colors duration-200 hover:text-pink-500"
+                      class="text-base font-medium text-sns-espresso transition-colors duration-200 hover:text-accent-600"
                     >
                       {link.label}
                     </a>
@@ -85,16 +77,11 @@ const navLinks = [
               </div>
 
               <div class="mt-auto flex flex-col gap-3">
-                <Button
-                  isLink
-                  size="base"
-                  variant="accent"
-                  href="https://lexingtonthemes.com/templates/outkast"
-                >
-                  Buy outkast
+                <Button isLink size="base" variant="accent" href="/contact">
+                  Hours & location
                 </Button>
-                <Button isLink size="base" variant="muted" href="/contact">
-                  Book a call
+                <Button isLink size="base" variant="default" href="/contact">
+                  Say hi
                 </Button>
               </div>
             </div>

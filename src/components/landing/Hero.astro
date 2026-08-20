@@ -1,47 +1,38 @@
 ---
-// Assets
 import { Image } from "astro:assets";
-import One from "@/images/assets/1.png";
-// Fundations
+import Interior from "@/images/shop/hero-door.png";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Marquee
-export const tags = [
-  "web development",
-  "UI design",
-  "UX design",
-  "marketing",
-  "copywriting",
-];
+export const tags = ["wash", "dry", "fold", "drip", "hang", "sip"];
 const repeated = Array(20).fill(tags.join(" — ")).join(" — ");
 ---
 
-<section class="bg-white overflow-hidden relative">
+<section class="bg-sns-foam overflow-hidden relative">
   <Wrapper variant="standardWide" class="px-8 pb-0 py-12 lg:pt-24">
     <div class="grid items-end gap-4 lg:grid-cols-3 max-w-5xl mx-auto">
       <div class="lg:col-span-2">
         <Text
           tag="h1"
           variant="displayXL"
-          class="tracking-tighter text-accent-800 text-balance"
+          class="text-sns-espresso text-balance"
         >
-          Web development and creative agency
+          Sip while you wash
         </Text>
       </div>
-      <Text tag="p" variant="textBase" class="font-medium text-accent-500">
-        We are a team of creatives and developers who work together to create a
-        unique and engaging experience for our clients.
+      <Text tag="p" variant="textBase" class="font-medium text-base-600">
+        Neighborhood coffee and a clean laundromat in one stop. Concrete walls,
+        oak benches, and daylight through big windows.
       </Text>
     </div>
     <Image
-      width="1200"
-      height="630"
-      class="w-full max-h-[80vh] rounded-t-2xl relative object-cover object-top mt-12"
-      src={One}
-      alt="#_"
+      width="1600"
+      height="900"
+      class="w-full max-h-[80vh] rounded-t-2xl relative object-cover object-center mt-12"
+      src={Interior}
+      alt="Sips n Suds lounge: concrete walls, oak bar, storefront windows, and stainless washers"
     />
     <div
-      class="bg-accent-200 text-accent-600 font-medium relative rounded-b-2xl z-10 py-2 px-4 bottom-0 w-full overflow-x-hidden"
+      class="bg-sns-butter text-sns-espresso font-medium relative rounded-b-2xl z-10 py-2 px-4 bottom-0 w-full overflow-x-hidden"
     >
       <div class="items-center relative animate-marquee flex whitespace-nowrap">
         {repeated}
